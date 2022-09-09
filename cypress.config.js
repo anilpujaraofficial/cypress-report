@@ -5,7 +5,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-
+    video: false,
     reporter: "cypress-multi-reporters",
     reporterOptions: {
       reporterEnabled: "mochawesome",
