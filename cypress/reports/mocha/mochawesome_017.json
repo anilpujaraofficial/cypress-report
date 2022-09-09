@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-09-09T01:51:44.692Z",
-    "end": "2022-09-09T01:51:49.845Z",
-    "duration": 5153,
+    "start": "2022-09-09T03:17:36.692Z",
+    "end": "2022-09-09T03:17:41.762Z",
+    "duration": 5070,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b7bfce71-cb3c-4c2e-8b3b-b569b853c171",
+      "uuid": "7d12bde9-ea6a-4c1e-a486-f9826ae4df8e",
       "title": "",
       "fullFile": "cypress/e2e/2-advanced-examples/viewport.cy.js",
       "file": "cypress/e2e/2-advanced-examples/viewport.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "571129eb-59fb-483c-914b-a684e4f3ae89",
+          "uuid": "4b1e897a-c99a-49e3-b5b9-333349f7d59b",
           "title": "Viewport",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "cy.viewport() - set the viewport size and dimension",
               "fullTitle": "Viewport cy.viewport() - set the viewport size and dimension",
               "timedOut": null,
-              "duration": 3108,
+              "duration": 3432,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "// https://on.cypress.io/viewport\ncy.get('#navbar').should('be.visible');\ncy.viewport(320, 480); // the navbar should have collapse since our screen is smaller\ncy.get('#navbar').should('not.be.visible');\ncy.get('.navbar-toggle').should('be.visible').click();\ncy.get('.nav').find('a').should('be.visible'); // lets see what our app looks like on a super large screen\ncy.viewport(2999, 2999); // cy.viewport() accepts a set of preset sizes\n// to easily set the screen to a device's width and height\n// We added a cy.wait() between each viewport change so you can see\n// the change otherwise it is a little too fast to see :)\ncy.viewport('macbook-15');\ncy.wait(200);\ncy.viewport('macbook-13');\ncy.wait(200);\ncy.viewport('macbook-11');\ncy.wait(200);\ncy.viewport('ipad-2');\ncy.wait(200);\ncy.viewport('ipad-mini');\ncy.wait(200);\ncy.viewport('iphone-6+');\ncy.wait(200);\ncy.viewport('iphone-6');\ncy.wait(200);\ncy.viewport('iphone-5');\ncy.wait(200);\ncy.viewport('iphone-4');\ncy.wait(200);\ncy.viewport('iphone-3');\ncy.wait(200); // cy.viewport() accepts an orientation for all presets\n// the default orientation is 'portrait'\ncy.viewport('ipad-2', 'portrait');\ncy.wait(200);\ncy.viewport('iphone-4', 'landscape');\ncy.wait(200); // The viewport will be reset back to the default dimensions\n// in between tests (the  default can be set in cypress.config.{js|ts})",
+              "code": "// https://on.cypress.io/viewport\ncy.get(\"#navbar\").should(\"be.visible\");\ncy.viewport(320, 480); // the navbar should have collapse since our screen is smaller\ncy.get(\"#navbar\").should(\"not.be.visible\");\ncy.get(\".navbar-toggle\").should(\"be.visible\").click();\ncy.get(\".nav\").find(\"a\").should(\"be.visible\"); // lets see what our app looks like on a super large screen\ncy.viewport(2999, 2999); // cy.viewport() accepts a set of preset sizes\n// to easily set the screen to a device's width and height\n// We added a cy.wait() between each viewport change so you can see\n// the change otherwise it is a little too fast to see :)\ncy.viewport(\"macbook-15\");\ncy.wait(200);\ncy.viewport(\"macbook-13\");\ncy.wait(200);\ncy.viewport(\"macbook-11\");\ncy.wait(200);\ncy.viewport(\"ipad-2\");\ncy.wait(200);\ncy.viewport(\"ipad-mini\");\ncy.wait(200);\ncy.viewport(\"iphone-6+\");\ncy.wait(200);\ncy.viewport(\"iphone-6\");\ncy.wait(200);\ncy.viewport(\"iphone-5\");\ncy.wait(200);\ncy.viewport(\"iphone-4\");\ncy.wait(200);\ncy.viewport(\"iphone-3\");\ncy.wait(200); // cy.viewport() accepts an orientation for all presets\n// the default orientation is 'portrait'\ncy.viewport(\"ipad-2\", \"portrait\");\ncy.wait(200);\ncy.viewport(\"iphone-4\", \"landscape\");\ncy.wait(200); // The viewport will be reset back to the default dimensions\n// in between tests (the  default can be set in cypress.config.{js|ts})",
               "err": {},
-              "uuid": "50c205b0-187a-4502-8171-a1bc4874c511",
-              "parentUUID": "571129eb-59fb-483c-914b-a684e4f3ae89",
+              "uuid": "65dbc4f2-1452-4e51-8d85-0667e3158563",
+              "parentUUID": "4b1e897a-c99a-49e3-b5b9-333349f7d59b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "50c205b0-187a-4502-8171-a1bc4874c511"
+            "65dbc4f2-1452-4e51-8d85-0667e3158563"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3108,
+          "duration": 3432,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

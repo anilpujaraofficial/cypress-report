@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 2,
-    "passes": 2,
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2022-09-09T01:49:31.731Z",
-    "end": "2022-09-09T01:49:35.605Z",
-    "duration": 3874,
-    "testsRegistered": 2,
-    "passPercent": 100,
+    "failures": 1,
+    "start": "2022-09-09T03:16:13.166Z",
+    "end": "2022-09-09T03:16:13.403Z",
+    "duration": 237,
+    "testsRegistered": 1,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,80 +18,46 @@
   },
   "results": [
     {
-      "uuid": "a409c991-1152-4885-afb6-502f05771f61",
+      "uuid": "2eb1740a-3977-4923-b0fe-364420bfdb5c",
       "title": "",
       "fullFile": "cypress/e2e/2-advanced-examples/aliasing.cy.js",
       "file": "cypress/e2e/2-advanced-examples/aliasing.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
-      "tests": [],
-      "suites": [
+      "tests": [
         {
-          "uuid": "86475e23-82d8-49ef-9e6b-f20d329bcd49",
-          "title": "Aliasing",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": ".as() - alias a DOM element for later use",
-              "fullTitle": "Aliasing .as() - alias a DOM element for later use",
-              "timedOut": null,
-              "duration": 478,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "// https://on.cypress.io/as\n// Alias a DOM element for use later\n// We don't have to traverse to the element\n// later in our code, we reference it with @\ncy.get('.as-table').find('tbody>tr').first().find('td').first().find('button').as('firstBtn'); // when we reference the alias, we place an\n// @ in front of its name\ncy.get('@firstBtn').click();\ncy.get('@firstBtn').should('have.class', 'btn-success').and('contain', 'Changed');",
-              "err": {},
-              "uuid": "86a7f35a-363f-4ef2-b43f-95f716e4447d",
-              "parentUUID": "86475e23-82d8-49ef-9e6b-f20d329bcd49",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": ".as() - alias a route for later use",
-              "fullTitle": "Aliasing .as() - alias a route for later use",
-              "timedOut": null,
-              "duration": 1768,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "// Alias the route to wait for its response\ncy.intercept('GET', '**/comments/*').as('getComment'); // we have code that gets a comment when\n// the button is clicked in scripts.js\ncy.get('.network-btn').click(); // https://on.cypress.io/wait\ncy.wait('@getComment').its('response.statusCode').should('eq', 200);",
-              "err": {},
-              "uuid": "b3899a7c-dfe5-4aac-bcfe-f6919b59948b",
-              "parentUUID": "86475e23-82d8-49ef-9e6b-f20d329bcd49",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "86a7f35a-363f-4ef2-b43f-95f716e4447d",
-            "b3899a7c-dfe5-4aac-bcfe-f6919b59948b"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 2246,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": "An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 159,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "throw err;",
+          "err": {
+            "message": "ReferenceError: The following error originated from your test code, not from Cypress.\n\n  > second is not defined\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
+            "estack": "ReferenceError: The following error originated from your test code, not from Cypress.\n\n  > second is not defined\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at Suite.eval (http://localhost:40449/__cypress/tests?p=cypress/e2e/2-advanced-examples/aliasing.cy.js:101:3)\n    at ./cypress/e2e/2-advanced-examples/aliasing.cy.js (http://localhost:40449/__cypress/tests?p=cypress/e2e/2-advanced-examples/aliasing.cy.js:100:1)\n    at __webpack_require__ (http://localhost:40449/__cypress/tests?p=cypress/e2e/2-advanced-examples/aliasing.cy.js:20:30)\n    at 0 (http://localhost:40449/__cypress/tests?p=cypress/e2e/2-advanced-examples/aliasing.cy.js:137:18)\n    at __webpack_require__ (http://localhost:40449/__cypress/tests?p=cypress/e2e/2-advanced-examples/aliasing.cy.js:20:30)\n    at eval (http://localhost:40449/__cypress/tests?p=cypress/e2e/2-advanced-examples/aliasing.cy.js:84:18)\n    at eval (http://localhost:40449/__cypress/tests?p=cypress/e2e/2-advanced-examples/aliasing.cy.js:87:10)\n    at eval (<anonymous>)",
+            "diff": null
+          },
+          "uuid": "8ec15581-1676-4a39-8f82-3294163f0fed",
+          "parentUUID": "2eb1740a-3977-4923-b0fe-364420bfdb5c",
+          "isHook": false,
+          "skipped": false
         }
       ],
+      "suites": [],
       "passes": [],
-      "failures": [],
+      "failures": [
+        "8ec15581-1676-4a39-8f82-3294163f0fed"
+      ],
       "pending": [],
       "skipped": [],
-      "duration": 0,
+      "duration": 159,
       "root": true,
-      "rootEmpty": true,
+      "rootEmpty": false,
       "_timeout": 2000
     }
   ],

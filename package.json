@@ -2,15 +2,15 @@
   "name": "cypress_report",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "clean:reports": "rm -rf cypress/reports && mkdir cypress/reports && mkdir cypress/reports/mochareports",
     "combine:reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
     "generate:report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
-    "posttest": "npm run combine-reports && npm run generate-report",
-    "cy:verify": "npx cypress verify"
+    "post:test": "npm run combine:reports && npm run generate:report",
+    "cy:verify": "npx cypress verify",
+    "cy:post:report:mattermost": "node --experimental-modules cypress/helper/mattermost_report/mattermost.mjs"
   },
   "license": "MIT",
   "dependencies": {
